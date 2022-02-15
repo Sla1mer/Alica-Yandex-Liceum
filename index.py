@@ -3,9 +3,9 @@ from flask import Flask, url_for
 app = Flask(__name__)
 
 
-# @app.route('/')
-# def start():
-#     return "Миссия Колонизация Марса"
+@app.route('/')
+def start():
+    return "Миссия Колонизация Марса"
 
 
 @app.route('/index')
@@ -23,7 +23,7 @@ def promotion():
 
 
 
-@app.route('/')
+@app.route('/promotion_image')
 def image_mars():
     return f"""<!doctype html>
                    <html lang="en">
