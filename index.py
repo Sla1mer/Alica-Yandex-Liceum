@@ -18,5 +18,10 @@ def training(prof):
     return render_template("training.html", prof=prof.lower(), img=img_name)
 
 
+@app.route("/list_prof/<type>")
+def list_prof(type):
+    print(type)
+    return render_template("list_prof.html", type=type)
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
