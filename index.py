@@ -12,7 +12,7 @@ def start(title):
 @app.route("/training/<prof>")
 def training(prof):
     img_name = url_for("static", filename="img/sci.png")
-    if prof == "инженер" or prof == "строитель":
+    if "инженер" in prof or "строитель" in prof:
         img_name = url_for("static", filename="img/ing.png")
 
     return render_template("training.html", prof=prof.lower(), img=img_name)
