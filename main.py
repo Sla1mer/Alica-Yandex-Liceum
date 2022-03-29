@@ -8,11 +8,6 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 api = Api(app)
 
 
-@app.errorhandler(404)
-def not_found(_):
-    return make_response(jsonify({'error': 'Not found'}), 404)
-
-
 def main():
     db_session.global_init("db/blogs.db")
     app.register_blueprint(news_api.blueprint)

@@ -22,7 +22,7 @@ print(post("http://127.0.0.1:5000/api/v2/users", json={
 }).json())
 
 # Правильный запрос
-print(post("http://127.0.0.1:5000/api/users", json={
+print(post("http://127.0.0.1:5000/api/v2/users", json={
     "name": "Nazar",
     "surname": "Paketik",
     "age": 16,
