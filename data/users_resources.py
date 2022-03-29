@@ -39,9 +39,7 @@ class UsersListResource(Resource):
         session = db_session.create_session()
         users = session.query(User).all()
         return jsonify({'users': [item.to_dict(
-            only=('name', 'surname', 'age', 'address',
-                  'email', 'position', 'speciality',
-                  'hashed_password')) for item in users]})
+            only=('title', 'content', 'user_id', 'is_private')) for item in users]})
 
     def post(self):
         args = parser.parse_args()
